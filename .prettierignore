@@ -1,0 +1,7 @@
+# Ignore all HTML files:
+**/*.html
+
+*.d.ts
+package.json
+pnpm-lock.yaml
+dist
