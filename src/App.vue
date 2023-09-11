@@ -24,6 +24,17 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { getVisualization } from '@/api/visualization';
+
+const data = ref();
+const fetchData = async () => {
+  data.value = await getVisualization();
+};
+
+setInterval(() => {
+  fetchData();
+}, 3000);
+</script>
 
 <style scoped></style>
