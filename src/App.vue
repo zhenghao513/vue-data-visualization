@@ -31,7 +31,10 @@
         :data="data.serverData.servers"
         class="h-1/3"
       />
-      <RingBar class="h-1/3 mt-5" />
+      <RingBar
+        :data="data.abnormalData.abnormals"
+        class="h-1/3 mt-5"
+      />
       <WordCloud class="h-1/3 mt-5" />
     </div>
   </div>
