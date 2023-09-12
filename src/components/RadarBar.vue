@@ -7,6 +7,7 @@
     ></div>
   </div>
 </template>
+
 <script setup lang="ts">
 import type { Risk } from '@/api/visualization';
 import type { ECOption } from '@/utils/chart';
