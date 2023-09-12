@@ -6,6 +6,7 @@ import {
   GraphChart,
   LinesChart,
   PieChart,
+  EffectScatterChart,
 } from 'echarts/charts';
 import {
   TitleComponent,
@@ -17,6 +18,8 @@ import {
   TransformComponent,
   PolarComponent,
   LegendComponent,
+  GeoComponent,
+  TimelineComponent,
 } from 'echarts/components';
 import { LabelLayout, UniversalTransition } from 'echarts/features';
 import { CanvasRenderer } from 'echarts/renderers';
@@ -28,6 +31,7 @@ import type {
   GraphSeriesOption,
   LinesSeriesOption,
   PieSeriesOption,
+  EffectScatterSeriesOption,
 } from 'echarts/charts';
 import type {
   // 组件类型的定义后缀都为 ComponentOption
@@ -38,6 +42,8 @@ import type {
   PolarComponentOption,
   RadarComponentOption,
   LegendComponentOption,
+  GeoComponentOption,
+  TimelineComponentOption,
 } from 'echarts/components';
 import type { ComposeOption } from 'echarts/core';
 
@@ -56,6 +62,9 @@ export type ECOption = ComposeOption<
   | LinesSeriesOption
   | PieSeriesOption
   | LegendComponentOption
+  | GeoComponentOption
+  | TimelineComponentOption
+  | EffectScatterSeriesOption
 >;
 
 // 注册必须的组件
@@ -76,6 +85,9 @@ echarts.use([
   LinesChart,
   LegendComponent,
   PieChart,
+  GeoComponent,
+  TimelineComponent,
+  EffectScatterChart,
 ]);
 
 export default echarts;

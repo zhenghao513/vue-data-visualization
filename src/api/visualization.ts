@@ -41,6 +41,9 @@ export interface MapData {
   categoryData: {
     [key: string]: Array<{ name: string; value: number }>;
   };
+  topData: {
+    [key: string]: Array<{ name: string; value: number }>;
+  };
 }
 
 export interface TotalData {

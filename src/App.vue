@@ -22,7 +22,10 @@
         :data="data.totalData"
         class="bg-opacity-50 bg-slate-800 p-3"
       />
-      <MapChart class="bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1" />
+      <MapChart
+        :data="data.mapData"
+        class="bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1"
+      />
     </div>
 
     <!-- right -->
