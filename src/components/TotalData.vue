@@ -76,22 +76,22 @@ import type { TotalData } from '@/api/visualization';
 
 const { data } = defineProps<{ data: TotalData }>();
 
-const totalCountTarget = ref(null);
-const city1 = ref(null);
-const city2 = ref(null);
-const city3 = ref(null);
-const city4 = ref(null);
-const city5 = ref(null);
-const city6 = ref(null);
+const totalCountTarget = ref();
+const city1 = ref();
+const city2 = ref();
+const city3 = ref();
+const city4 = ref();
+const city5 = ref();
+const city6 = ref();
 
 onMounted(() => {
-  new CountUp(totalCountTarget.value, data.total).start();
-  new CountUp(city1.value, data.hb).start();
-  new CountUp(city2.value, data.db).start();
-  new CountUp(city3.value, data.hd).start();
-  new CountUp(city4.value, data.zn).start();
-  new CountUp(city5.value, data.xn).start();
-  new CountUp(city6.value, data.xb).start();
+  new CountUp(totalCountTarget.value, Number(data.total)).start();
+  new CountUp(city1.value, Number(data.hb)).start();
+  new CountUp(city2.value, Number(data.db)).start();
+  new CountUp(city3.value, Number(data.hd)).start();
+  new CountUp(city4.value, Number(data.zn)).start();
+  new CountUp(city5.value, Number(data.xn)).start();
+  new CountUp(city6.value, Number(data.xb)).start();
 });
 </script>
 
