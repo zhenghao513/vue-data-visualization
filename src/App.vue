@@ -9,7 +9,10 @@
         :data="data.regionData.regions"
         class="h-1/3"
       />
-      <RadarBar class="h-1/3 mt-5" />
+      <RadarBar
+        :data="data.riskData.risks"
+        class="h-1/3 mt-5"
+      />
       <Relation class="h-1/3 mt-5" />
     </div>
 
