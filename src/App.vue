@@ -13,7 +13,10 @@
         :data="data.riskData.risks"
         class="h-1/3 mt-5"
       />
-      <Relation class="h-1/3 mt-5" />
+      <Relation
+        :data="data.relationData.relations"
+        class="h-1/3 mt-5"
+      />
     </div>
 
     <!-- center -->
