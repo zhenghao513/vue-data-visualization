@@ -177,6 +177,9 @@ const renderChart = () => {
 onMounted(() => {
   myChart = echarts.init(target.value);
   renderChart();
+  window.addEventListener('resize', () => {
+    myChart?.resize();
+  });
 });
 
 watch(
