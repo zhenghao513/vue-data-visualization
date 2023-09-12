@@ -6,7 +6,11 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      script: {
+        propsDestructure: true,
+      },
+    }),
     Components({}),
     AutoImport({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
