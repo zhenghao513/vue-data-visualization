@@ -36,4 +36,5 @@ export default defineConfig({
     }),
   ],
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  base: '/vue-data-visualization/',
 });
