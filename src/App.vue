@@ -35,7 +35,10 @@
         :data="data.abnormalData.abnormals"
         class="h-1/3 mt-5"
       />
-      <WordCloud class="h-1/3 mt-5" />
+      <WordCloud
+        :data="data.wordCloudData"
+        class="h-1/3 mt-5"
+      />
     </div>
   </div>
 </template>
