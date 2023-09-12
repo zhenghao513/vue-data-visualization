@@ -1,10 +1,14 @@
 <template>
   <div
+    v-if="data"
     class="bg-[url('src/assets/imgs/bg.jpg')] bg-cover bg-center h-screen text-white p-5 flex overflow-hidden"
   >
     <!-- left -->
     <div class="flex-1 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
-      <HorizontalBar class="h-1/3" />
+      <HorizontalBar
+        :data="data.regionData.regions"
+        class="h-1/3"
+      />
       <RadarBar class="h-1/3 mt-5" />
       <Relation class="h-1/3 mt-5" />
     </div>
@@ -25,12 +29,13 @@
 </template>
 
 <script setup lang="ts">
-import { getVisualization } from '@/api/visualization';
+import { VisualizationResult, getVisualization } from '@/api/visualization';
 
-const data = ref();
+const data = ref<VisualizationResult>();
 const fetchData = async () => {
   data.value = await getVisualization();
 };
+fetchData();
 
 setInterval(() => {
   fetchData();
