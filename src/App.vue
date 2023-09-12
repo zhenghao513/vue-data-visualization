@@ -18,7 +18,10 @@
 
     <!-- center -->
     <div class="w-1/2 ml-5 flex flex-col">
-      <TotalData class="bg-opacity-50 bg-slate-800 p-3" />
+      <TotalData
+        :data="data.totalData"
+        class="bg-opacity-50 bg-slate-800 p-3"
+      />
       <MapChart class="bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1" />
     </div>
 
