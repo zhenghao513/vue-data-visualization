@@ -27,7 +27,10 @@
 
     <!-- right -->
     <div class="flex-1 ml-5 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
-      <VerticalBar class="h-1/3" />
+      <VerticalBar
+        :data="data.serverData.servers"
+        class="h-1/3"
+      />
       <RingBar class="h-1/3 mt-5" />
       <WordCloud class="h-1/3 mt-5" />
     </div>
